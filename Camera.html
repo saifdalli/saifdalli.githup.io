@@ -24,7 +24,7 @@
             }
             .image-upload
             {
-                width: 500px;
+                width: 750px;
                 background-image: url(car.png);
                 height: 600px;
                 background-size: contain;
@@ -36,44 +36,37 @@
             }
             .buttons1
             {
-                top: 167px;
-                left: 13px;
+                top: 233px;
+                left: 47px;
             }
             .buttons2
             {
-                top: 55px;
-                left: 198px;
+                top: 75px;
+                left: 321px;
             }
             .buttons3
             {    
-                top: 167px;
-                left: 410px;
-                
+                top: 233px;
+                left: 610px;
             }
             .buttons4
             {
-                top: 288px;
-                left: 194px;
+                top: 400px;
+                left: 313px;
             }
             .buttons5
             {
-                top: 237px;
-                left: 47px;
+                top: 337px;
+                left: 97px;
             }
         </style>
         <script>
             $(document).ready(function(){
                 var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
-                if (mobile) { 
-                    alert("MOBILE DEVICE!!");
-                    $('.navWrap').css('display', 'none'); // OR you can use $('.navWrap').hide();
-                } 
-                else 
-                { 
-                   $(".image-upload").hide();
+                if (!mobile) { 
+                   //$(".image-upload").hide();
                 }
                 $('input[type=file]').change(function(e){
-                  
                     $(this).siblings(".check-icon").attr("src","check-green.png");
                 });
                 
