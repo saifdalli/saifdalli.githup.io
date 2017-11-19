@@ -63,8 +63,8 @@
         <script>
             $(document).ready(function(){
                 var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
-                if (!mobile) { 
-                   //$(".image-upload").hide();
+                if (mobile) { 
+                   $(".image-upload").show();
                 }
                 $('input[type=file]').change(function(e){
                     $(this).siblings(".check-icon").attr("src","check-green.png");
@@ -79,7 +79,7 @@
 
         <div class="container">
             <h1>Images Capture</h1>
-            <div class="image-upload">
+            <div class="image-upload hide">
                 <div class="btns buttons1">
                     <img class="check-icon" src="check.png"/>
 
