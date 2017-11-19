@@ -24,6 +24,7 @@
             }
             .image-upload
             {
+                display: none;
                 width: 750px;
                 background-image: url(car.png);
                 height: 600px;
@@ -64,7 +65,7 @@
             $(document).ready(function(){
                 var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
                 if (mobile) { 
-                   $(".image-upload").show();
+                   $(".image-upload").attr("display","inline-block");
                 }
                 $('input[type=file]').change(function(e){
                     $(this).siblings(".check-icon").attr("src","check-green.png");
@@ -79,7 +80,7 @@
 
         <div class="container">
             <h1>Images Capture</h1>
-            <div class="image-upload hide">
+            <div class="image-upload ">
                 <div class="btns buttons1">
                     <img class="check-icon" src="check.png"/>
 
