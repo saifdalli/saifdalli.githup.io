@@ -3,21 +3,83 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
         <style>
             
-            .image-upload > input
+            .image-upload input
             {
                 display: none;
             }
             .image-upload img
             {
-                width: 80px;
+                width: 40px;
                 cursor: pointer;
             }
+            .check-icon
+            {
+                background-image: url(icons.png);
+            }
+            .image-upload
+            {
+                width: 500px;
+                background-image: url(car.png);
+                height: 600px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .btns{
+                position: absolute;
+                display: inline-block;
+            }
+            .buttons1
+            {
+                top: 167px;
+                left: 13px;
+            }
+            .buttons2
+            {
+                top: 55px;
+                left: 198px;
+            }
+            .buttons3
+            {    
+                top: 167px;
+                left: 410px;
+                
+            }
+            .buttons4
+            {
+                top: 288px;
+                left: 194px;
+            }
+            .buttons5
+            {
+                top: 237px;
+                left: 47px;
+            }
         </style>
+        <script>
+            $(document).ready(function(){
+                var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
+                if (mobile) { 
+                    alert("MOBILE DEVICE!!");
+                    $('.navWrap').css('display', 'none'); // OR you can use $('.navWrap').hide();
+                } 
+                else 
+                { 
+                   $(".image-upload").hide();
+                }
+                $('input[type=file]').change(function(e){
+                  
+                    $(this).siblings(".check-icon").attr("src","check-green.png");
+                });
+                
+            });
         
+        </script>
     </head>
     
     <body>
@@ -25,10 +87,55 @@
         <div class="container">
             <h1>Images Capture</h1>
             <div class="image-upload">
-                <label for="file-input">
-                    <img src="Camera-icon.png"/>
-                </label>
-                <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                <div class="btns buttons1">
+                    <img class="check-icon" src="check.png"/>
+
+                    <label for="file-input">
+                        <img src="Camera-icon.png"/>
+                    </label>
+                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                </div>
+                
+                
+                <div class="btns buttons2">
+                    <img class="check-icon" src="check.png"/>
+
+                    <label for="file-input">
+                        <img src="Camera-icon.png"/>
+                    </label>
+                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                </div>
+                
+                
+                <div class="btns buttons3">
+
+                    <label for="file-input">
+                        <img src="Camera-icon.png"/>
+                    </label>
+                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                    <img class="check-icon" src="check.png"/>
+
+                </div>
+                
+                
+                <div class="btns buttons4">
+                    <img class="check-icon" src="check.png"/>
+
+                    <label for="file-input">
+                        <img src="Camera-icon.png"/>
+                    </label>
+                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                </div>
+                
+                
+                <div class="btns buttons5">
+                    <img class="check-icon" src="check.png"/>
+
+                    <label for="file-input">
+                        <img src="Camera-icon.png"/>
+                    </label>
+                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                </div>
             </div>
             
         </div>
