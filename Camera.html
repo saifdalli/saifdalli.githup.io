@@ -24,6 +24,7 @@
             }
             .image-upload
             {   
+                display: none;
                 width: 750px;
                 margin: 0px auto;
                 background-image: url(car.png);
@@ -65,10 +66,9 @@
             $(document).ready(function(){
                 var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
                 if (mobile) { 
-   
+                    $('.image-upload').css('display', 'block'); 
                 }
                 else {
-                    $('.image-upload').css('display', 'none'); 
                 }
                 $('input[type=file]').change(function(e){
                     $(this).siblings(".check-icon").attr("src","check-green.png");
@@ -87,29 +87,29 @@
                 <div class="btns buttons1">
                     <img class="check-icon" src="check.png"/>
 
-                    <label for="file-input">
+                    <label for="file-input1">
                         <img src="Camera-icon.png"/>
                     </label>
-                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                    <input type="file" id="file-input1" accept="image/*" id="capture" multiple capture="camera">
                 </div>
                 
                 
                 <div class="btns buttons2">
                     <img class="check-icon" src="check.png"/>
 
-                    <label for="file-input">
+                    <label for="file-input2">
                         <img src="Camera-icon.png"/>
                     </label>
-                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                    <input type="file" id="file-input2" accept="image/*" id="capture" multiple capture="camera">
                 </div>
                 
                 
                 <div class="btns buttons3">
 
-                    <label for="file-input">
+                    <label for="file-input3">
                         <img src="Camera-icon.png"/>
                     </label>
-                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                    <input type="file" id="file-input3" accept="image/*" id="capture" multiple capture="camera">
                     <img class="check-icon" src="check.png"/>
 
                 </div>
@@ -118,20 +118,20 @@
                 <div class="btns buttons4">
                     <img class="check-icon" src="check.png"/>
 
-                    <label for="file-input">
+                    <label for="file-input4">
                         <img src="Camera-icon.png"/>
                     </label>
-                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                    <input type="file" id="file-input4" accept="image/*" id="capture" multiple capture="camera">
                 </div>
                 
                 
                 <div class="btns buttons5">
                     <img class="check-icon" src="check.png"/>
 
-                    <label for="file-input">
+                    <label for="file-input5">
                         <img src="Camera-icon.png"/>
                     </label>
-                    <input type="file" id="file-input" accept="image/*" id="capture" multiple capture="camera">
+                    <input type="file" id="file-input5" accept="image/*" id="capture" multiple capture="camera">
                 </div>
             </div>
             
