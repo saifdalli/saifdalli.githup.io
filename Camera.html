@@ -24,7 +24,6 @@
             }
             .image-upload
             {   
-                display: none;
                 width: 750px;
                 margin: 0px auto;
                 background-image: url(car.png);
@@ -65,8 +64,8 @@
         <script>
             $(document).ready(function(){
                 var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
-                if (mobile) { 
-                   $(".image-upload").show();
+                if (!mobile) { 
+                   $(".image-upload").hide();
                 }
                 $('input[type=file]').change(function(e){
                     $(this).siblings(".check-icon").attr("src","check-green.png");
